@@ -3,37 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="obsidian.css"> <!-- Link to the main CSS file -->
-    <link rel="stylesheet" href="your-theme.css"> <!-- Link to your theme CSS file -->
     <title>Dekalb Page</title>
+    <link rel="stylesheet" href="obsidian.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="your-theme.css"> <!-- Optional: Link to your theme CSS file -->
+    <style>
+        /* Insert your additional styles here */
+
+        /* Wikipedia logo */
+        body {
+            --vault-img: var(--wikipedia-logo);
+        }
+
+        .nav-folder.mod-root > .nav-folder-title::before {
+            content: "";
+            display: block;
+            background: center / contain no-repeat var(--vault-img);
+            width: 30px;
+            height: 30px;
+            margin-right: 0.5em;
+        }
+
+        .no-vault-img .nav-folder.mod-root > .nav-folder-title::before {
+            display: none;
+        }
+
+        /* Sidebar background */
+        .workspace-leaf-content[data-type="file-explorer"] {
+            background-color: var(--background-primary) !important;
+        }
+
+        /* Folders */
+        .nav-folder-children {
+            background-color: var(--background-secondary-alt);
+            padding: 5px;
+        }
+
+        /* Files */
+        .nav-file-title-content {
+            color: var(--link-color);
+        }
+
+        .nav-file-title-content:hover {
+            color: var(--link-color-hover);
+        }
+
+        .nav-file-title:hover {
+            background-color: transparent !important;
+        }
+
+        /* Collapse indicator */
+        body {
+            --nav-collapse-icon-color: var(--text-muted);
+            --nav-collapse-icon-color-collapsed: var(--text-muted);
+        }
+
+        .collapse-icon svg.svg-icon {
+            stroke-width: 2.5px;
+        }
+
+        /* Hide nav buttons until hover */
+        .nav-header {
+            transition: height 0.15s, opacity 0.1s;
+        }
+
+        .nav-header:not(:hover) {
+            height: 5px;
+            opacity: 0;
+        }
+
+        .nav-header:hover {
+            opacity: 1;
+        }
+
+        .nav-buttons-container:hover {
+            opacity: 1;
+        }
+
+        /* Ribbon */
+        body {
+            --ribbon-background: var(--background-primary);
+            --ribbon-width: 35px;
+            --icon-size: var(--icon-s);
+            --icon-l: 16.5px;
+        }
+
+        .ribbon-hover .workspace-ribbon.mod-left.is-collapsed:not(:hover) {
+            opacity: 0;
+            max-width: 0.1px;
+            min-width: 0px;
+            padding: 0px;
+        }
+
+        .ribbon-hover .workspace-ribbon.mod-left, .workspace-ribbon.mod-left.is-collapsed {
+            transition: 0.25s;
+        }
+
+        .ribbon-hide .workspace-ribbon.mod-left.is-collapsed {
+            display: none;
+        }
+
+        .ribbon-default .workspace-ribbon.mod-left.is-collapsed:not(:hover) {
+            opacity: 1;
+            max-width: unset;
+            min-width: unset;
+        }
+
+        /* Default theme colors */
+        .theme-light:not(.custom-accent),
+        .theme-dark:not(.custom-accent) {
+            --accent-h: 215 !important;
+            --accent-s: 79% !important;
+            --accent-l: 50% !important;
+        }
+
+        /* Primary colors */
+        .theme-light, .theme-dark {
+            --color-red-rgb: 232, 51, 51;
+            --color-red: rgb(232, 41, 41);
+            --color-cyan-rgb: 0, 194, 97;
+            --color-cyan: rgb(0, 163, 81);
+            --color-orange-rgb: 230, 111, 0;
+            --color-orange: rgb(230, 111, 0);
+            --color-yellow-rgb: 204, 204, 0;
+            --color-yellow: rgb(163, 163, 0);
+            --color-green-rgb: 97, 194, 0;
+            --color-green: rgb(82, 163, 0);
+            --color-blue-rgb: 0, 105, 224;
+            --color-blue: rgb(0, 105, 224);
+            --color-purple-rgb: 81, 0, 194;
+            --color-purple: rgb(140, 63, 247);
+            --color-pink-rgb: 194, 0, 81;
+            --color-pink: rgb(194, 0, 81);
+            --callout-quote: 110, 110, 110;
+        }
+
+        /* Dark theme */
+        .theme-dark {
+            --tab-outline-color: hsl(calc(var(--accent-h) - 10), var(--accent-s), var(--accent-l), 55%);
+            --tab-gradient: linear-gradient(to top, var(--color-accent-2) 0px, var(--color-accent-3) 0px, var(--background-primary) 100%);
+            --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.5%));
+            --color-accent-2: hsl(calc(var(--accent-h) - 2), var(--accent-s), calc(var(--accent-l) - 4%));
+            --color-accent-3: hsla(calc(var(--accent-h) - 10), var(--accent-s), var(--accent-l), 20%);
+            --color-base-00: #1e1f21;
+            --color-base-10: #242629;
+            --color-base-20: #27282b;
+            --color-base-25: #2f3135;
+            --color-base-30: #35383d;
+            --color-base-35: #313539;
+            --color-base-40: rgb(50, 52, 60);
+            --color-base-50: rgb(142, 148, 157);
+            --color-base-60: rgb(179, 181, 193);
+            --color-base-70: #d0d4d9;
+            --h6-background: hsla(var(--accent-h), 35%, calc(var(--accent-l) + 10%), 15%);
+            --color-base-100: #d8dce3;
+            --background-secondary-alt: var(--color-base-10);
+            --background-modifier-border: #dae1ea31;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Dekalb</h1>
-        <img src="example.png" alt="Dekalb" />
 
-        <h2>Familiar Look</h2>
-        <p>Make your vault look like your own personal Wikipedia! This theme styles images, headings, and even the sidebar in the classic style of your favourite encyclopedia.</p>
+    <h1 class="inline-title">Dekalb</h1>
+    <img src="assets/newest.png" alt="Dekalb" />
 
-        <h2>Infoboxes</h2>
-        <blockquote class="info">
-            <p>Any <strong>Info</strong> blockquote will float to the right of the note like an infobox.</p>
-        </blockquote>
+    <h2>Familiar Look</h2>
+    <p>Make your vault look like your own personal Wikipedia! This theme styles images, headings, and even the sidebar in the classic style of your favorite encyclopedia.</p>
 
-        <h2>Callout Alts</h2>
-        <p>Examples of callout styles...</p>
-
-        <h2>Image Alts</h2>
-        <p>Examples of image styles...</p>
-
-        <h2>Update</h2>
-        <p>All images will now float except those placed inside callouts.</p>
-
-        <h2>Notes</h2>
-        <p>I'm not a theme developer or anything...</p>
-
-        <h2>Screenshots (Outdated)</h2>
-        <img src="example.png" alt="Article example" />
+    <h2>Info Callouts</h2>
+    <div class="callout" data-callout="info">
+        <div class="callout-title">Important Information</div>
+        <div class="callout-content">
+            <p>This is an example of an info callout styled as an infobox. It provides additional context or information relevant to the content.</p>
+            <img src="assets/info-image.png" alt="Info Image" />
+        </div>
     </div>
+
+    <h2>Blockquote Example</h2>
+    <blockquote>
+        <div class="frontmatter-container">
+            <div class="frontmatter-container-header">Blockquote Header</div>
+            <div class="frontmatter-section">
+                <span class="frontmatter-section-label">Citation</span>
+                <span class="frontmatter-section-data">Some interesting information.</span>
+            </div>
+        </div>
+    </blockquote>
+
+    <h2>Centered Image Example</h2>
+    <img src="assets/sample-centered-image.png" alt="Centered Image" class="float-center" />
+
+    <h2>Left and Right Aligned Images</h2>
+    <img src="assets/sample-left-image.png" alt="Left Image" class="markdown-rendered" alt="left" />
+    <img src="assets/sample-right-image.png" alt="Right Image" class="markdown-rendered" alt="right" />
+
+    <h2>Inline Dataview Example</h2>
+    <div class="dataview inline-field-key">Field Key</div>
+    <div class="dataview inline-field-value">Field Value</div>
+
+    <h2>Inline Field in Callout</h2>
+    <div class="callout" data-callout="info">
+        <div class="callout-title">Inline Field Callout</div>
+        <div class="callout-content">
+            <div class="dataview inline-field-key">Key</div>
+            <div class="dataview inline-field-value">Value</div>
+        </div>
+    </div>
+
+    <h2>Images</h2>
+    <p>Images can be floated to the right:</p>
+    <img src="assets/sample-image.png" alt="Sample Image" class="markdown-rendered" alt="sample" />
+
+    <h2>Footer Section</h2>
+    <footer>
+        <p>© 2024 Your Name. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
