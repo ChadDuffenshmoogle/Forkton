@@ -4,86 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Wikipedia</title>
-    <link rel="stylesheet" href="obsidian.css">
     <link rel="stylesheet" href="theme.css">
-    <style>
-        /* This Snippet will make images, blockquotes, and callouts float to the right. */
-
-        /* Blockquote Section */
-        .markdown-preview-view blockquote {
-            overflow: auto;
-            border-left: none;
-            color: var(--text-normal);
-            padding: 0.5em;
-            float: right;
-            clear: right;
-            width: 28% !important; /* Adjust width to avoid overflow */
-            margin: 0.5em 1em;
-            line-height: 1.5em;
-            font-size: 0.8em;
-            background-color: var(--background-secondary) !important;
-        }
-
-        .markdown-preview-view blockquote::before {
-            background: transparent !important;
-        }
-
-        /* Image Section */
-        img {
-            display: block;
-            float: right;
-            margin: 0.5em 1em;
-            width: 28% !important; /* Adjust width to avoid overflow */
-            clear: right;
-        }
-
-        /* Callout Section */
-        .callout {
-            overflow: auto;
-            border-left: none;
-            color: var(--text-normal);
-            padding: 0.5em;
-            float: right;
-            clear: right;
-            width: 28% !important; /* Adjust width to avoid overflow */
-            margin: 0.5em 1em;
-            line-height: 1.5em;
-            font-size: 0.8em;
-        }
-
-        .callout::before {
-            background: transparent !important;
-        }
-
-        /* Footer Styling */
-        footer {
-            clear: both;
-            text-align: center;
-            margin-top: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="obsidian.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <h1>Welcome to My Personal Wikipedia</h1>
     
-    <blockquote>This is an Info blockquote styled like an infobox!</blockquote>
-    <blockquote>[!info|normal] This will look like a regular callout instead of an infobox.</blockquote>
-    
+    <blockquote>
+        This is an Info blockquote styled like an infobox!
+    </blockquote>
+
     <h2>Image Examples</h2>
-    <img src="example.png" alt="Example Image">
-    <img src="books.png" alt="Right Floated Image">
-    <img src="books.png" alt="Left Floated Image" style="float:left;">
-    <img src="books.png" alt="Centered Image" style="display:block; margin:auto;">
+    <img src="assets/example.png" alt="Example Image" class="float-right" style="width: 30%;">
 
     <h2>Callout Examples</h2>
-    <div class="callout">This is a bug callout that floats right!</div>
-    <div class="callout" style="float:left;">This will float to the left.</div>
-    <div class="callout">This is a <strong>Check</strong> callout styled like an infobox.</div>
+    <div class="callout float-right">
+        This is a Check callout styled like an infobox.
+    </div>
 
     <footer>
-        <p>Theme by Bluemoondragon07 | MIT License</p>
+        Theme by Bluemoondragon07 | MIT License
     </footer>
-    
 </body>
 </html>
