@@ -17,8 +17,8 @@
             padding: 0.5em;
             float: right;
             clear: right;
-            width: 30% !important;
-            margin: 0.5em 1em 0.5em 1em !important;
+            width: 28% !important; /* Adjust width to avoid overflow */
+            margin: 0.5em 1em;
             line-height: 1.5em;
             font-size: 0.8em;
             background-color: var(--background-secondary) !important;
@@ -32,8 +32,8 @@
         img {
             display: block;
             float: right;
-            margin: 0.5em 1em 0.5em 1em !important;
-            width: 30% !important;
+            margin: 0.5em 1em;
+            width: 28% !important; /* Adjust width to avoid overflow */
             clear: right;
         }
 
@@ -45,14 +45,21 @@
             padding: 0.5em;
             float: right;
             clear: right;
-            width: 30% !important;
-            margin: 0.5em 1em 0.5em 1em !important;
+            width: 28% !important; /* Adjust width to avoid overflow */
+            margin: 0.5em 1em;
             line-height: 1.5em;
             font-size: 0.8em;
         }
 
         .callout::before {
             background: transparent !important;
+        }
+
+        /* Footer Styling */
+        footer {
+            clear: both;
+            text-align: center;
+            margin-top: 1em;
         }
     </style>
 </head>
@@ -65,7 +72,7 @@
     
     <h2>Image Examples</h2>
     <img src="example.png" alt="Example Image">
-    <img src="books.png" alt="Right Floated Image" style="float:right;">
+    <img src="books.png" alt="Right Floated Image">
     <img src="books.png" alt="Left Floated Image" style="float:left;">
     <img src="books.png" alt="Centered Image" style="display:block; margin:auto;">
 
