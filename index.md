@@ -1,24 +1,31 @@
 ![](assets/newest.png)
 
-# Familiar Look
-Make your vault look like your own personal Wikipedia!
+# Dekalb
 
-# Infoboxes
-> [!info] This is an infobox example. 
+>[!info|normal]
+>**Location:** DeKalb, Illinois  
+>**Established:** 1856  
+>**Population:** 43,255 (2020 Census)  
 
-# Callout Alts
-- `right` - float a callout right
-- `left` - float a callout to the left
+## Overview
+DeKalb is a city in northern Illinois, best known for being home to Northern Illinois University. It has a rich history rooted in agriculture and education.
 
-# Image Alts
-![right](assets/example.png)
+## History
+Founded in the mid-19th century, DeKalb played a significant role in the agricultural advancements of the region, particularly in the development of hybrid corn.
 
-# Update
-- All images will now float except those placed inside callouts.
-- Dark mode has been updated.
+## Geography
+DeKalb is located in the Midwest, approximately 65 miles west of Chicago. It features a mix of urban and rural landscapes.
 
-# Notes
-- Feel free to make pull requests or suggestions for this theme.
+## Education
+- **Northern Illinois University:** A major public university offering a variety of undergraduate and graduate programs.
+- **Community Colleges:** Serve the local population with accessible education options.
 
-## Screenshots
-![](assets/article-example.png)
+## Economy
+The local economy is driven by education, agriculture, and manufacturing, with several businesses contributing to the employment landscape.
+
+## Notable Residents
+- **Barb T. A. -** Noted for contributions to the local community and education.
+- **John Smith -** Influential figure in local politics.
+
+## References
+- [City of DeKalb Official Website](http://www.cityofdekalb.com)
