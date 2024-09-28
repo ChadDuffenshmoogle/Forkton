@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="obsidian.css">
     <style>
         /* Additional inline styles can go here if needed */
+        .info-box {
+            border: 1px solid #0078d4;
+            background-color: #e7f3ff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .callout {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .float-right {
+            float: right;
+            margin-left: 10px;
+        }
+        .float-left {
+            float: left;
+            margin-right: 10px;
+        }
+        .center {
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -18,23 +41,33 @@
     <main>
         <section>
             <h2>Infobox Example</h2>
-            <blockquote>[!info] This is an Info blockquote styled like an infobox!</blockquote>
-            <blockquote>[!info|normal] This will look like a regular callout instead of an infobox.</blockquote>
+            <div class="info-box">
+                <strong>This is an Info blockquote styled like an infobox!</strong>
+            </div>
+            <div class="info-box">
+                <strong>This will look like a regular callout instead of an infobox.</strong>
+            </div>
         </section>
 
         <section>
             <h2>Image Examples</h2>
-            <img src="example.png" alt="Example Image" style="border: 1px solid #ccc;"/>
-            <img src="example.png" alt="Right Floated Image" style="float: right;"/>
-            <img src="example.png" alt="Left Floated Image" style="float: left;"/>
-            <img src="example.png" alt="Centered Image" style="display: block; margin: auto;"/>
+            <img src="example.png" alt="Example Image" />
+            <img src="example.png" alt="Right Floated Image" class="float-right" />
+            <img src="example.png" alt="Left Floated Image" class="float-left" />
+            <img src="example.png" alt="Centered Image" class="center" />
         </section>
 
         <section>
             <h2>Callout Examples</h2>
-            <blockquote>[!bug|right] This is a bug callout that floats right!</blockquote>
-            <blockquote>[!quote|left] This will float to the left.</blockquote>
-            <blockquote>[!check|info] This is a **Check** callout styled like an infobox.</blockquote>
+            <div class="callout" style="float: right;">
+                <strong>This is a bug callout that floats right!</strong>
+            </div>
+            <div class="callout" style="float: left;">
+                <strong>This will float to the left.</strong>
+            </div>
+            <div class="callout">
+                <strong>This is a Check callout styled like an infobox.</strong>
+            </div>
         </section>
     </main>
     
