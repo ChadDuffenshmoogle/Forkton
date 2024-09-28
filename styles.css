@@ -1,29 +1,26 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 20px;
+    background-color: #f9f9f9;
 }
 
-header {
-    background: #f0f0f0;
-    padding: 10px;
+h1 {
+    font-size: 2em;
+    color: #003366;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+h2 {
+    font-size: 1.5em;
+    color: #003366;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-main {
-    margin-top: 20px;
+p {
+    margin: 10px 0;
 }
 
 footer {
-    text-align: center;
     margin-top: 20px;
+    font-size: 0.8em;
+    text-align: center;
 }
