@@ -1,13 +1,24 @@
-# My Wikipedia-Style Page
+![](assets/newest.png)
 
-Welcome to the styled page that looks like Wikipedia!
+# Familiar Look
+Make your vault look like your own personal Wikipedia!
 
-## Section 1
-This is some content in the first section.
+# Infoboxes
+> [!info] This is an infobox example. 
 
-### Metadata
-- **Name:** Example Person
-- **Date:** 2024-09-28
-- **Location:** GitHub Repo
+# Callout Alts
+- `right` - float a callout right
+- `left` - float a callout to the left
 
-More content below the box.
+# Image Alts
+![right](assets/example.png)
+
+# Update
+- All images will now float except those placed inside callouts.
+- Dark mode has been updated.
+
+# Notes
+- Feel free to make pull requests or suggestions for this theme.
+
+## Screenshots
+![](assets/article-example.png)
